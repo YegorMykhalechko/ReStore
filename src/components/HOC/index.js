@@ -1,3 +1,3 @@
-import WithBookStoreService from './WithBookStoreService'
+import withBookStoreService from './WithBookStoreService'
 
-export default WithBookStoreService
+export default withBookStoreService
