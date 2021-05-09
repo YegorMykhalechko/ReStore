@@ -1,0 +1,10 @@
+.cart__total{
+    text-align: right;
+    font-size: 1.3rem;
+    margin-right: 10px;
+}
+
+.cart__btn{
+    margin-left: 5px;
+    margin-top: 10px;
+}

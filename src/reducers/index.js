@@ -1,15 +1,10 @@
-const initialState = {
-    books: [],
-}
+import updataBookList from './bookList'
+import updataShopCart from './shopCart'
 
-const reducer = (state=initialState, action) => {
-    switch (action.type) {
-        case 'BOOKS_LOADED':
-            return {
-                books: action.payload
-            }
-        default:
-            return state
+const reducer = (state, action) => {
+    return {
+        bookList: updataBookList(state, action),
+        shopCart: updataShopCart(state, action)
     }
 }
 

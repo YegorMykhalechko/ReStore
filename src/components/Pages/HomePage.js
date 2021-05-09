@@ -2,9 +2,14 @@ import React from 'react'
 
 import BookList from '../BookList'
 
+import ShoppingCartDetail from '../ShoppingCartDetail'
+
 const HomePage = () => {
     return (
-        <BookList />
+        <div>
+            <BookList />
+            <ShoppingCartDetail />
+        </div>
     )
 }
 
