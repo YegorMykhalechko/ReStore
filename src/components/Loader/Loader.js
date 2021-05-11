@@ -1,8 +1,12 @@
 import React from 'react'
 
+import './Loader.css'
+
 const Loader = () => {
     return (
-        <p>Its Loader components</p>
+        <div class="loader">
+            Loading...
+        </div>
     )
 }
 
