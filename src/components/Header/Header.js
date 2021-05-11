@@ -1,6 +1,9 @@
 import React from 'react'
 
+import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
+
+import { allBookRemoveFromCart, bookRemoveFromCart, bookAddToCart } from '../../actions'
 
 import './Header.css'
 
@@ -13,11 +16,24 @@ const Header = ({ numItems, total }) => {
             <Link to='/card'>
                 <div className="book-cart">
                     <i className="book-cart__logo fa fa-shopping-cart"></i>
-                    {numItems} items (${total})
+                    {numItems} items ({total}$)
                 </div>
             </Link>
         </header>
     )
 }
 
-export default Header
+const mapStateToProps = ({shopCart: { orderTotal, orderCount }}) => {
+    return {
+        numItems: orderCount,
+        total: orderTotal
+    }
+}
+
+const mapDispatchToProps = {
+    onIncrease: bookAddToCart,
+    onDecrease: bookRemoveFromCart,
+    onDelete: allBookRemoveFromCart
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header)

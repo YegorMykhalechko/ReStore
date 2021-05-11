@@ -9,7 +9,7 @@ import './App.css'
 const App = () => {
     return (
         <main role="main" className="container">
-            <Header numItems={1} total={10}/>
+            <Header />
             <Switch>
                 <Route
                     path='/'

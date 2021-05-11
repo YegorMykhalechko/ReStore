@@ -4,14 +4,21 @@ export default class BookStoreService {
         id: 1,
         title: 'Java Script for lousers',
         author: 'Human',
-        price: 1,
+        price: 10,
         coverImage: 'https://chubarov.if.ua/images/book_design_2.jpg?crc=502489758'
     },
     {
         id: 2,
         title: 'Java Script for lousers 2',
         author: 'Human',
-        price: 1,
+        price: 20,
+        coverImage: 'https://chubarov.if.ua/images/book_design_2.jpg?crc=502489758'
+    },
+    {
+        id: 3,
+        title: 'Java Script for lousers 2',
+        author: 'Human',
+        price: 40,
         coverImage: 'https://chubarov.if.ua/images/book_design_2.jpg?crc=502489758'
     }]
 
