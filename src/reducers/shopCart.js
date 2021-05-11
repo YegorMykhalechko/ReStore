@@ -42,8 +42,8 @@ const updataOrder = (state, bookId, quanity) => {
 
     const newItem = updataCartItem(book, item, quanity)
 
-    const totalPrice = cartItems.reduce((acc,cur)=>acc+cur.total, book.price)
-    const totalCount = cartItems.reduce((acc,cur)=>acc+cur.count, 1)
+    const totalPrice = cartItems.reduce((acc,cur)=>acc+cur.total, book.price * quanity)
+    const totalCount = cartItems.reduce((acc,cur)=>acc+cur.count, quanity)
     
     return {
         orderCount: totalCount,
